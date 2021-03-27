@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Game-Host - Jeux</title>
+
+	<link rel="stylesheet" type="text/css" href="css/vendors/Bootstrap/bootstrap.min.css">
+
+
+	<link href="css/plugins/navigation.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/theme-font.min.css">
+	<link rel="shortcut icon" href="img/logo gamehost.jpg" />
+
+	<!--Styles for RTL-->
+
+	<!--<link rel="stylesheet" type="text/css" href="css/rtl.min.css">-->
+ <!-- IE11 Support -->	<script>window.MSInputMethodContext && document.documentMode && document.write('<script src="js/ie11CustomProperties.js"><\x2fscript>');</script>
+
+</head>
+<body>
+
+<!-- Preloader -->
+
+<!--<div id="hellopreloader">
+	<div class="preloader">
+		<svg width="58" height="58" viewBox="0 0 58 58" xmlns="http://www.w3.org/2000/svg">
+			<g fill="none" fill-rule="evenodd">
+				<g transform="translate(2 1)" stroke="#FFF" stroke-width="1.5">
+					<circle cx="42.601" cy="11.462" r="5" fill-opacity="1" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="1;0;0;0;0;0;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="49.063" cy="27.063" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;1;0;0;0;0;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="42.601" cy="42.663" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;1;0;0;0;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="27" cy="49.125" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;0;1;0;0;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="11.399" cy="42.663" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;0;0;1;0;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="4.938" cy="27.063" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;0;0;0;1;0;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="11.399" cy="11.462" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;0;0;0;0;1;0" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+					<circle cx="27" cy="5" r="5" fill-opacity="0" fill="#fff">
+						<animate attributeName="fill-opacity"
+								 begin="0s" dur="1.3s"
+								 values="0;0;0;0;0;0;0;1" calcMode="linear"
+								 repeatCount="indefinite" />
+					</circle>
+				</g>
+			</g>
+		</svg>
+	</div>
+</div>-->
+
+<!-- ... end Preloader -->
+
+
+<!-- Main Header -->
+
+<nav id="navigation" class="site-header navigation navigation-justified header--sticky">
+	<div class="container">
+		<div class="navigation-header">
+			<div class="navigation-logo">
+				<a href="index-2.html">
+
+
+					<img loading="lazy" src="img/demo-content/logo-white.png" alt="logo">
+
+				</a>
+			</div>
+			<div class="navigation-button-toggler">
+				<i class="hamburger-icon"></i>
+			</div>
+		</div>
+		<div class="navigation-body">
+			<div class="navigation-body-header">
+				<div class="navigation-logo">
+					<a href="index-2.html">
+
+
+
+					</a>
+				</div>
+				<span class="navigation-body-close-button">&#10005;</span>
+			</div>
+			<ul class="navigation-menu">
+				<li class="navigation-item is-active">
+					<a class="navigation-link" href="index-3.html">Accueil</a>
+				</li>
+				<li class="navigation-item">
+					<a class="navigation-link" href="#">Hébergement</a>
+					<div class="navigation-megamenu">
+						<div class="navigation-megamenu-container">
+							<div class="navigation-row">
+								<div class="navigation-col">
+									<a href="jeux.html" class="navigation-hosting-item border-red-themes">
+										<img class="navigation-hosting-item-img " loading="lazy" src="img/demo-content/navigation-hostings/hosting2.png" alt="hosting">
+										Serveurs de jeux
+									</a>
+								</div>
+								<div class="navigation-col">
+									<a href="vps.html" class="navigation-hosting-item border-orange-themes">
+										<img class="navigation-hosting-item-img " loading="lazy" src="img/demo-content/navigation-hostings/hosting3.png" alt="hosting">
+										Serveurs VPS
+									</a>
+								</div>
+								<div class="navigation-col">
+									<a href="nodejs.html" class="navigation-hosting-item border-primary-themes">
+										<img class="navigation-hosting-item-img " loading="lazy" src="img/demo-content/navigation-hostings/hosting4.png" alt="hosting">
+										Bot NodeJS
+									</a>
+								</div>
+								<div class="navigation-col">
+									<a href="web.html" class="navigation-hosting-item border-blue-themes">
+										<img class="navigation-hosting-item-img " loading="lazy" src="img/demo-content/navigation-hostings/hosting5.png" alt="hosting">
+										Web cPanel
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="navigation-item">
+					<a target="_blank" class="navigation-link" href="https://discord.gg/uhTrhDzNtn">État du réseau</a>
+				</li>
+				<li class="navigation-item">
+					<a class="navigation-link" href="#">Accès</a>
+					<ul class="navigation-dropdown">
+						<li class="navigation-dropdown-item">
+							<a target="_blank" class="navigation-dropdown-link" href="Le lien">Panel serveurs de jeux</a>
+						</li>
+						<li class="navigation-dropdown-item">
+							<a target="_blank" class="navigation-dropdown-link" href="Le lien">PhpMyAdmin</a>
+						</li>
+					</ul>
+				</li>
+				<li class="navigation-item">
+					<a class="navigation-link" href="#">Support</a>
+					<ul class="navigation-dropdown">
+						<li class="navigation-dropdown-item">
+							<a class="navigation-dropdown-link" href="https://discord.gg/uhTrhDzNtn">Ouvrir un ticket</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="navigation-body-section navigation-additional-menu">
+				<a target="_blank" href="https://discord.gg/uhTrhDzNtn" class="crumina-button button--dark button--xs">Discord</a>
+				<a href="Lien de connexion" class="crumina-button button--red button--xs">Connexion [BIENTOT]</a>
+				<a href="Lien d'inscription" class="crumina-button button--red button--xs">Inscription [BIENTOT]</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- ... end Main Header -->
+
+
+<div class="main-content-wrapper">
+
+	<section class="crumina-stunning-header stunning-header-bg1 pb60">
+		<div class="container">
+			<div class="row justify-content-center align-center">
+				<div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
+					<h1 class="page-title text-white">Serveurs de jeux</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="crumina-breadcrumbs breadcrumbs--red">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs-item">
+							<a href="index-3.html">Accueil</a>
+							<span class="crumina-icon">»</span>
+						</li>
+						<li class="breadcrumbs-item active">
+							<span>Jeux</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="large-section-padding crumina-pricings bg-grey">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 align-center mb-5 ml-auto mr-auto">
+					<h2>LES SERVEURS QUE L'ON PROPOSE</h2>
+					<p class="fs-18 fw-medium">Choisissez votre jeu favori</p>
+				</div>
+			</div>
+
+			<div class="alert alert-dismissible alert-success">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				Promotions : <b>aucune</b> actuellement <b></b>!
+			</div><br><br>
+
+			<div class="row pricing-wrap">
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/csgo.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">CS:GO</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">64 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Scripts</span> supportés
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/gtav.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">FIVEM </h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">128 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Scripts</span> supportés
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/gmod.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">GARRY'S MOD</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">128 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Scripts</span> supportés
+								</li>
+								
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 align-center mb-5 ml-auto mr-auto">
+				</div>
+			</div>
+
+			<div class="row pricing-wrap">
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/fs19.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">FS 19</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">16 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Mods</span> supportés
+								</li>
+								<li class="position-item">
+									<span class="font-weight-bold">DLC</span> activable gratuitement
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Officiel FS 19
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 7,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/minecraft.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">MINECRAFT (Version Java et Bedrock)</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">999 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Mods et Scripts</span> supportés
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/rust.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">RUST</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">250 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Mods et Scripts</span> supportés
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 align-center mb-5 ml-auto mr-auto">
+				</div>
+			</div>
+
+			<div class="row pricing-wrap">
+				<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="crumina-module crumina-pricing-tables-item pricing-tables-item-standard pricing--best-value">
+                        <div class="best-value"><img loading="lazy" src="img/demo-content/valheim.png" alt="logo"></div>
+                        
+						<div class="main-pricing-content">
+
+							<h5 class="pricing-title">Valheim</h5>
+
+							<p class="pricing-description">Performances et fluidité.</p>
+
+							<div class="pricing-onsale">Jusqu'à <span class="font-weight-bold">10 slots</span></div>
+
+							<ul class="pricing-tables-position">
+								<li class="position-item">
+									<span class="font-weight-bold">Mods et Scripts</span> supportés
+								</li>
+								<li class="position-item">
+									Stockage<span class="font-weight-bold"> SSD NVMe</span>
+                                </li>
+                                <li class="position-item">
+									<span class="font-weight-bold"> Panel </span>Pterodactyl
+								</li>
+                            </ul>
+
+                            <h4><p style="color: #FFFF00";>A partir de 5,99€</h4>
+                            
+                            <a href="https://discord.gg/kk76x9znAN" class="crumina-button button--primary button--xl button--bordered w-100">DÉCOUVRIR</a>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+    
+    
+
+	
+</div>
+
+
+<!-- Footer -->
+
+<footer id="site-footer" class="footer footer--dark footer--with-decoration">
+
+	<div class="footer-content">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="widget widget_links">
+						<h5 class="widget-title">
+							Nos services
+						</h5>
+						<ul>
+							<li>
+								<a href="jeux.html">
+									Serveurs de jeux
+									<svg class="crumina-icon">
+										<use xlink:href="#icon-triangle-arrow"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="vps.html">
+									Serveurs VPS
+									<svg class="crumina-icon">
+										<use xlink:href="#icon-triangle-arrow"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="nodejs.html">
+									NodeJS
+									<svg class="crumina-icon">
+										<use xlink:href="#icon-triangle-arrow"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				
+
+				<div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 mb-4 mb-lg-0">
+					<div class="widget widget_links">
+						<h5 class="widget-title">
+							Légal
+						</h5>
+						<ul>
+							<li>
+								<a target="_blank" href="ml.pdf">
+									Mentions Légales
+									<svg class="crumina-icon">
+										<use xlink:href="#icon-triangle-arrow"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="cgv.pdf">
+									CGU / CGV
+									<svg class="crumina-icon">
+										<use xlink:href="#icon-triangle-arrow"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				
+
+	<div class="sub-footer bg-black">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center mb-0 mb-lg-0">
+					<div class="copyright">
+						<center><span>Copyright © 2021 <a href="#">Game-Host</a></span></center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a class="back-to-top" href="#">
+		<svg class="crumina-icon">
+			<use xlink:href="#icon-to-top"></use>
+		</svg>
+	</a>
+</footer>
+
+<!-- ... end Footer -->
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/Bootstrap/bootstrap.bundle.min.js"></script>
+
+<script src="js/js-plugins/navigation.min.js"></script>
+<!--<script src="js/js-plugins/select2.min.js"></script>-->
+<script src="js/js-plugins/material.min.js"></script>
+<script src="js/js-plugins/swiper.min.js"></script>
+<script src="js/js-plugins/jquery-countTo.min.js"></script>
+<script src="js/js-plugins/waypoints.min.js"></script>
+<!--<script src="js/js-plugins/leaflet.min.js"></script>-->
+<!--<script src="js/js-plugins/MarkerClusterGroup.min.js"></script>-->
+<!--<script src="js/js-plugins/jquery.magnific-popup.min.js"></script>-->
+<!--<script src="js/js-plugins/TimeCircles.min.js"></script>-->
+<script src="js/js-plugins/smooth-scroll.min.js"></script>
+<script src="js/js-plugins/jquery.matchHeight.min.js"></script>
+<!--<script src="js/js-plugins/imagesLoaded.min.js"></script>-->
+<!--<script src="js/js-plugins/isotope.pkgd.min.js"></script>-->
+<!--<script src="js/js-plugins/ajax-pagination.min.js"></script>-->
+<!--<script src="js/js-plugins/Chart.min.js"></script>-->
+<!--<script src="js/js-plugins/chartjs-plugin-deferred.min.js"></script>-->
+<script src="../widget-v4.tidiochat.com/1_59_0/static/js/render.a85be4350154c8cd3748.js" async></script>
+
+
+<script src="js/main.js"></script>
+<!--<script src="js/js-plugins/leaflet-init.js"></script>-->
+
+<!-- jQuery-scripts for Modules (Send Message) -->
+<!--<script src="modules/forms/src/js/jquery.validate.min.js"></script>-->
+<!--<script src="modules/forms/src/js/sweetalert2.all.js"></script>-->
+<!--<script src="modules/forms/src/js/scripts.js"></script>-->
+
+<!-- SVG icons loader -->
+<script src="js/svg-loader.js"></script>
+<!-- /SVG icons loader -->
+
+</body>
+</html>
